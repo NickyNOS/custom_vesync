@@ -1,7 +1,7 @@
 
 # **Important message**
 > 
-> This a fork of the existing archived project created by NickyNOS. Please contribute here.
+> This a fork of the existing archived project created by vlebourl. Please contribute here.
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 [![GitHub release](https://img.shields.io/github/v/release/vlebourl/custom_vesync.svg)](https://GitHub.com/vlebourl/custom_vesync/releases/)

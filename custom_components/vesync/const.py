@@ -27,6 +27,7 @@ VS_MODE_MANUAL = "manual"
 VS_MODE_SLEEP = "sleep"
 VS_MODE_ADVANCED_SLEEP = "advancedSleep"
 VS_MODE_TURBO = "turbo"
+VS_MODE_PET = "pet"
 
 VS_TO_HA_ATTRIBUTES = {"humidity": "current_humidity"}
 
@@ -120,4 +121,42 @@ SENSOR_TYPES_AIRFRYER = {
     #    UnitOfTime.MINUTES,
     #    "remaining_time",
     # ],
+}
+
+SKU_TO_BASE_DEVICE = {
+    # Air Purifiers
+    "LV-PUR131S": "LV-PUR131S",
+    "LV-RH131S": "LV-PUR131S",  # Alt ID Model LV-PUR131S
+    "Core200S": "Core200S",
+    "LAP-C201S-AUSR": "Core200S",  # Alt ID Model Core200S
+    "LAP-C202S-WUSR": "Core200S",  # Alt ID Model Core200S
+    "Core300S": "Core300S",
+    "LAP-C301S-WJP": "Core300S",  # Alt ID Model Core300S
+    "LAP-C301S-WAAA": "Core300S",  # Alt ID Model Core300S
+    "Core400S": "Core400S",
+    "LAP-C401S-WJP": "Core400S",  # Alt ID Model Core400S
+    "LAP-C401S-WUSR": "Core400S",  # Alt ID Model Core400S
+    "LAP-C401S-WAAA": "Core400S",  # Alt ID Model Core400S
+    "Core600S": "Core600S",
+    "LAP-C601S-WUS": "Core600S",  # Alt ID Model Core600S
+    "LAP-C601S-WUSR": "Core600S",  # Alt ID Model Core600S
+    "LAP-C601S-WEU": "Core600S",  # Alt ID Model Core600S,
+    "Vital200S": "Vital200S",
+    "LAP-V201S-AASR": "Vital200S",  # Alt ID Model Vital200S
+    "LAP-V201S-WJP": "Vital200S",  # Alt ID Model Vital200S
+    "LAP-V201S-WEU": "Vital200S",  # Alt ID Model Vital200S
+    "LAP-V201S-WUS": "Vital200S",  # Alt ID Model Vital200S
+    "LAP-V201-AUSR": "Vital200S",  # Alt ID Model Vital200S
+    "LAP-V201S-AEUR": "Vital200S",  # Alt ID Model Vital200S
+    "LAP-V201S-AUSR": "Vital200S",  # Alt ID Model Vital200S
+    "Vital100S": "Vital100S",
+    "LAP-V102S-WUS": "Vital100S",  # Alt ID Model Vital100S
+    "LAP-V102S-AASR": "Vital100S",  # Alt ID Model Vital100S
+    "LAP-V102S-WEU": "Vital100S",  # Alt ID Model Vital100S
+    "LAP-V102S-WUK": "Vital100S",  # Alt ID Model Vital100S
+    "EverestAir": "EverestAir",
+    "LAP-EL551S-AUS": "EverestAir",  # Alt ID Model EverestAir
+    "LAP-EL551S-AEUR": "EverestAir",  # Alt ID Model EverestAir
+    "LAP-EL551S-WEU": "EverestAir",  # Alt ID Model EverestAir
+    "LAP-EL551S-WUS": "EverestAir",  # Alt ID Model EverestAir
 }

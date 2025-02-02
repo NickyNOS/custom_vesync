@@ -24,9 +24,22 @@ from .const import (
     VS_MODE_SLEEP,
     VS_MODE_ADVANCED_SLEEP,
     VS_MODE_TURBO,
+    VS_MODE_PET,
     VS_MODES,
     VS_TO_HA_ATTRIBUTES,
+    SKU_TO_BASE_DEVICE,
 )
+
+PRESET_MODES = {
+    "LV-PUR131S": [VS_MODE_AUTO, VS_MODE_SLEEP],
+    "Core200S":   [VS_MODE_SLEEP],
+    "Core300S":   [VS_MODE_AUTO, VS_MODE_SLEEP],
+    "Core400S":   [VS_MODE_AUTO, VS_MODE_SLEEP],
+    "Core600S":   [VS_MODE_AUTO, VS_MODE_SLEEP],
+    "EverestAir": [VS_MODE_AUTO, VS_MODE_SLEEP, VS_MODE_TURBO],
+    "Vital200S":  [VS_MODE_AUTO, VS_MODE_SLEEP, VS_MODE_PET],
+    "Vital100S":  [VS_MODE_AUTO, VS_MODE_SLEEP, VS_MODE_PET],
+}
 
 
 async def async_setup_entry(
@@ -118,6 +131,11 @@ class VeSyncFanHA(VeSyncDevice, FanEntity):
     def unique_info(self):
         """Return the ID of this fan."""
         return self.smartfan.uuid
+
+    @property
+    def preset_modes(self) -> list[str]:
+        """Get the list of available preset modes."""
+        return PRESET_MODES[SKU_TO_BASE_DEVICE[self.device.device_type]]
 
     @property
     def extra_state_attributes(self):

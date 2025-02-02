@@ -22,6 +22,7 @@ from .const import (
     VS_MODE_AUTO,
     VS_MODE_MANUAL,
     VS_MODE_SLEEP,
+    VS_MODE_ADVANCED_SLEEP,
     VS_MODE_TURBO,
     VS_MODES,
     VS_TO_HA_ATTRIBUTES,
@@ -77,7 +78,7 @@ class VeSyncFanHA(VeSyncDevice, FanEntity):
                 VS_MODE_MANUAL,
                 *[
                     mode
-                    for mode in [VS_MODE_AUTO, VS_MODE_SLEEP, VS_MODE_TURBO]
+                    for mode in [VS_MODE_AUTO, VS_MODE_SLEEP, VS_MODE_ADVANCED_SLEEP, VS_MODE_TURBO]
                     if mode in self.smartfan._config_dict[VS_MODES]
                 ],
             ]
@@ -160,6 +161,8 @@ class VeSyncFanHA(VeSyncDevice, FanEntity):
             self.smartfan.auto_mode()
         elif preset_mode == VS_MODE_SLEEP:
             self.smartfan.sleep_mode()
+        elif preset_mode == VS_MODE_ADVANCED_SLEEP:
+            self.smartfan.advanced_sleep_mode()
         elif preset_mode == VS_MODE_MANUAL:
             self.smartfan.manual_mode()
         elif preset_mode == VS_MODE_TURBO:

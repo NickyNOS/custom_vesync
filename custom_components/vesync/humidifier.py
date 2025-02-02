@@ -34,9 +34,8 @@ from .const import (
 _LOGGER = logging.getLogger(__name__)
 
 
-MAX_HUMIDITY = 80
 MIN_HUMIDITY = 30
-
+MAX_HUMIDITY = 80
 
 VS_TO_HA_MODE_MAP = {
     VS_MODE_AUTO: MODE_AUTO,
